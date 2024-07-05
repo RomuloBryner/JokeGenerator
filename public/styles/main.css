@@ -1,0 +1,132 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+    background: url(../images/cool-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+h1{
+    font-weight: 700;
+    font-size: 32px;
+    color: #E6E6E9;
+    margin: 0px;
+}
+h4{
+    font-weight: 400;
+    font-size: 16px;
+    color: #E6E6E9;
+    margin: 0px;
+}
+button, input{
+    font-weight: 500;
+    font-family: 'Montserrat';
+}
+.content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.card{
+    max-width: 630px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(15px);
+
+}
+
+.card-joke{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 42px 57px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.joke{
+    padding: 16px;
+    background: rgba(137, 175, 233, 0.8);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.card-buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.button1, .button2{
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: 150px;
+}
+
+.button1{
+    background-color: #89AFE9;
+    border-style: none;
+    color: white;
+    cursor: pointer;
+}
+.button2{
+    background-color: transparent;
+    border: 1px solid #89AFE9;
+    color: #89AFE9;
+    cursor: pointer;
+}
+
+.card-settings{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    width: 100%;
+    padding: 20px 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+.card-settings form{
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label-tittle{
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+.card-show{
+    position: relative;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.settings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.settings-row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}

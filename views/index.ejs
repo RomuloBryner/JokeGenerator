@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="content">
+        <div class="card">
+            <div class="card-joke">
+                <h1>Joke Generator</h1>
+                <div class="joke">
+                    <h4><%= content %></h4>
+                </div>
+                <div class="card-buttons">
+                    <form id="joke-form" method="post">
+                        <button type="submit" formaction="/get-joke" class="button1">Make a joke</button>
+                    </form>
+                    <button class="button2">Customize</button>
+                </div>
+            </div>
+            <div class="card-settings">
+                <form id="joke-settings" method="post">
+                    <div class="settings-row1">
+                        <div class="settings">
+                            <div>
+                                <label for="type" class="label-tittle">Type:</label><br>
+                            </div>
+                            <div>
+                                <input type="radio" name="type" value="single" id="single" checked>
+                                <label for="single">Single</label>
+                                <input type="radio" name="type" value="twopart" id="twopart">
+                                <label for="twopart">Two part</label>
+                            </div>
+                        </div>
+                        <div class="settings">
+                            <div>
+                                <label for="lang" class="label-tittle">Language:</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="lang" value="en" id="en" checked>
+                                <label for="english">English</label>
+                                <input type="radio" name="lang" value="es" id="es">
+                                <label for="spanish">Spanish</label>
+                            </div>                                    
+                        </div>
+                    </div>
+                    <div class="settings">
+                        <div>
+                            <label for="categories" class="label-tittle">Categories:</label><br>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="categories" value="Misc" id="">
+                            <label for="Misc">Misc</label>
+                            <input type="checkbox" name="categories" value="Programming" id="">
+                            <label for="Programming">Programming</label>
+                            <input type="checkbox" name="categories" value="Dark" id="">
+                            <label for="Dark">Dark</label>
+                            <input type="checkbox" name="categories" value="Pun" id="">
+                            <label for="Pun">Pun</label>
+                            <input type="checkbox" name="categories" value="Spooky" id="">
+                            <label for="Spooky">Spooky</label>
+                            <input type="checkbox" name="categories" value="Christmas" id="">
+                            <label for="Christmas">Christmas</label>
+                        </div>
+                    </div>
+                    <button type="submit" formaction="/get-joke" class="button1 button3">Filter</button>
+                </form>
+            </div>        
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        document.querySelector(".button2").addEventListener("click", (e) => {
+            var cardsettings = document.querySelector(".card-settings");
+            cardsettings.classList.toggle('card-show')
+        });
+        document.querySelector(".button3").addEventListener("click", (e) => {
+            var cardsettings = document.querySelector(".card-settings");
+            setTimeout(() => {
+                cardsettings.classList.toggle('card-show');
+            }, 100);
+        });
+    </script>
+</body>
+</html>
